@@ -1,0 +1,207 @@
+body {
+    /* overflow-x: hidden!important; */
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+    background: #f1f2f7;
+}
+/* custom background color */
+
+.bg-orange {
+    background-color: #FF8A65;
+}
+.bg-teal-light {
+    background-color: #4DB6AC;
+}
+
+.bg-pink-light {
+    background-color: #F06292;
+}
+
+.bg-purple-light {
+    background-color: #9575cd !important;
+}
+
+
+/* Login Page */
+
+.intro-img {
+    width: 50px;
+    height: 50px;
+}
+
+.login-form input[type='text'],
+input[type='password'] {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid #E2E7EB;
+    color: #555;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+.remeber {
+    color: #555;
+    font-size: 12px;
+}
+
+.rm-fp a {
+    color: #555;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.py-100 {
+    padding: 100px 0px;
+}
+
+/* Navbar CSS */
+.nav-bar {
+    border: 1px solid #00000000;
+}
+.navabar-list {
+    height: 50px;
+}
+.color-green {
+    color:#00acac;;
+}
+nav form i {
+    font-size: 12px;
+    color: black;
+}
+nav form span {
+    font-size: 14px;
+}
+
+/* Sidebar CSS */
+.sidebar-list {
+    position: absolute;
+    width: 228px;
+    height: 100vh;
+    background-color: #f1f1f1;
+    transition: left 0.3s ease-in-out;
+}
+
+.side-logo img {
+    border-radius: 50%;
+}
+
+#sidebar.active {
+    left: -200px;
+}
+
+ul li a i {
+    font-size: 15px;
+}
+
+ul li a span {
+    font-size: 14px;
+}
+
+/* Main Content CSS */
+.right-side-card {
+    font-size: 50px;
+}
+.user-info img {
+    border-radius: 50%;
+    border: 5px solid rgba(256, 256, 256, 0.3);
+    width: 60px;
+    height: 60px;
+}
+.bg-maroon-light {
+    background-color: #C24984 !important;
+    color: #fff !important;
+}
+.user-info {
+    border-radius: 4px;
+}
+
+.user-info .user-profile {
+    border-radius: 4px 4px 0px 0px;
+}
+.user-info div div span {
+    font-size: 16px;
+    font-weight: 300;
+}
+.user-info div div p {
+    font-size: 12px;
+}
+.user-info .form-list {
+    border-radius: 0px 0px 4px 4px;
+}
+.user-info .form-list table {
+    font-size: 12px;
+    width: 100%;
+}
+.user-info .form-list table tr {
+    border-top: 1px solid #EEEEEE;
+    height: 45px;
+}
+.user-info .form-list table tr td {
+    padding: 8px;
+}
+.user-info .form-list table tr td i {
+    color: #C24984;
+}
+.user-info .form-list table:hover tr:hover td {
+    background-color: #f0f3f5;;
+}
+table-hover>tbody>tr:hover>td {
+    background-color: #f0f3f5;;
+
+}
+.notice table {
+    font-size: 12px;
+    width: 100%;
+}
+.notice table tr {
+    border-top: 1px solid #EEEEEE;
+}
+.notice table tr td {
+    padding: 8px;
+}
+.notice table tr td i {
+    color: #C24984;
+}
+.notice table:hover tr:hover {
+    background-color: #f0f3f5;;
+}
+.notice table tr td a {
+    border-radius: 4px;
+    padding: 2px;
+}
+.notice table tr td a i {
+    margin: 5px;
+    font-size: 12px;
+}
+
+/* calendar */
+#calendar {
+    max-width: 1100px;
+    margin: 40px auto;
+  }
+  
+/* footer */
+/* .no-margin {
+    font-size: 13px;
+    font-size: 13px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    position: fixed;
+} */
+footer {
+    position: fixed;
+    bottom: 0;
+    font-size: 13px;
+    /* left: 0; */
+    width: 100%;
+    padding: 10px 0;
+    background-color: #fff;
+    text-align: center;
+  }

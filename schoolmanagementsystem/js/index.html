@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    /* .side-bar {
+  margin-left: 0px;    } */
+   aside.hidden {
+    display: none;
+    margin-left: -220;
+  }
+  .dash-bar.expanded {
+    background-color: #D9E0E7;
+    width: 100%;
+}
+  /* .footer.shrink {
+    left: 0px;
+  } */
+  </style>
+  
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header>
+        <script>
+          fetch("navbar.html")
+            .then(response => {
+              return response.text()
+            })
+            .then(data => {
+              document.querySelector("header").innerHTML = data;
+              
+              const sidebar = document.querySelector('aside');
+              const dashboard = document.querySelector('.dash-bar');
+              // const footerbar = document.querySelector('.footer');
+              const sidebarToggle = document.querySelector('#sidebar-toggle');
+
+            sidebarToggle.addEventListener('click', function() {
+              sidebar.classList.toggle('hidden');
+              dashboard.classList.toggle('expanded');
+              // footerbar.classList.toggle('shrink');
+              console.log('toggle clicked')
+            });
+            });
+        </script>
+      </header>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <aside>
+          <script>
+            fetch("sidebar.html")
+              .then(response => {
+                return response.text()
+              })
+              .then(data => {
+                document.querySelector("aside").innerHTML = data;
+              });
+          </script>
+        </aside>
+      </div>
+      <div class="col-10 dash-bar">
+        <div class="dashboard">
+          <script>
+            fetch("dashboard.html")
+              .then(response => {
+                return response.text()
+              })
+              .then(data => {
+                document.querySelector(".dashboard").innerHTML = data;
+              });
+          </script>
+        </div>
+          <div class="row footer">
+            <div class="">
+              <script>
+                fetch("footer.html")
+                  .then(response => {
+                    return response.text()
+                  })
+                  .then(data => {
+                    document.querySelector(".footer").innerHTML = data;
+                  });
+              </script>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
