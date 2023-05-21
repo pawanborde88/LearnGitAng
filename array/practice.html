@@ -152,11 +152,16 @@
            else{
             document.getElementById('marktextp').innerText=stdnameis+" 😢opps ...!You are fail";
            }
-
         }
-
-
-
+        function clearbutton(){
+            var stdnameis=document.getElementById('stdnameEnter').value="  ";
+            var marh1=document.getElementById('mathmark').value=" ";
+            var eng1=document.getElementById('engmark').value=" ";
+            var phy1=document.getElementById('phymark').value=" ";
+            var chek1=document.getElementById('chemark').value=" ";
+            var his1=document.getElementById('hismark').value=" ";
+            document.getElementById('marktextp').innerHTML=" ";
+        }
 
         var studentname=[];
 
@@ -164,12 +169,10 @@
             var getelement=document.getElementById('textinput1').value;
             studentname.push(getelement);
             document.getElementById('textarea').innerText=studentname;
-            document.getElementById('textinput1').value= " "
-          
+            document.getElementById('textinput1').value= " "       
         }
         function remove(){
             document.getElementById('textarea').innerHTML="  ";
-
         }
         var numberarray=[];
         function pushbutton(){
@@ -197,7 +200,6 @@
             document.getElementById("value1").value= " "
 
         }
-
         function gessvalue(){
             var inputnum=document.getElementById('evenorodd').value;
             if(inputnum%2==0){
@@ -206,7 +208,6 @@
             else{
                 document.getElementById("evenoddtext").innerText= inputnum+" is Odd No"
             }
-
         }
         function selectcity(){
              var cityis=document.getElementById('cityname').value;
