@@ -10,10 +10,11 @@
 </head>
 <body class="bg-danger-subtle">
 
-    <<div class="container mt-5 ">
+    <div class="container mt-5 ">
         <div class="row column-gap-5">
             <div class="col-5 rounded-4 p-4 bg-body-secondary border border-primary">
                 <div class="text-center "><b>Add Student </b> <hr style="color: tomato;"></div>
+               
                 <div class="row ">
                     <div class="col-4 ">
                         <input type="text" class="form-control" name="" id="textinput1" placeholder="Enter Name ">
@@ -25,7 +26,7 @@
                         <button class="btn btn-info" onclick="remove()">Remove</button>
                     </div>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 mt-4">
                     <strong class="" style="color: darkred;"> <p id="textarea"></p></strong>
                         </div>
                     </div>
@@ -59,7 +60,7 @@
             <div class="col-4 p-4 mt-2 rounded-4 bg-body-secondary border border-primary">
                 <div class="text-center ">
                     <h5>Even OR ODD</h5>
-                </div>
+                </div><hr>
                 <div class="row">
                     <div class="col-6">
                         <input class="form-control" placeholder="Enter Value" type="text" name="" id="evenorodd">
@@ -75,7 +76,7 @@
             <div class="col-6 mt-3 rounded-4 bg-body-secondary border border-primary">
                 <div class="text-center mt-3">
                     <h5 >Select City</h5>
-                </div>
+                </div><hr>
                 <div class="col-6">
                     <select name="" aria-label="size 3 select example" id="cityname" class="form-control form-select " onselect="selectcity()">
                         <option selected>Select City</option>
@@ -87,16 +88,76 @@
                         <option value="Ambajogai">Ambajogai</option>
                         <option value="Parali">Parali</option>
                         <option value="Nashik">Nashik</option>
-                    </select>
-                    
+                    </select>                
                 </div>
                   <p id="cityselected"></p>   
             </div>
-           
+        </div>
+        <div class="row">
+            <div class="col-8 mt-3 rounded-4 bg-body-secondary border border-primary">
+                <div class="text-center mt-3">
+                    <h5 >Student Marksheet</h5>
+                </div><hr>
+                <div class="row">
+                    <div class="col-6 m-2">
+                        <input type="text" class="form-control" placeholder="Enter Student Name" name="" id="stdnameEnter">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <input type="text" name="" class="form-control" id="mathmark" placeholder="Math">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" name="" class="form-control" id="engmark" placeholder="English">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" name="" class="form-control" id="phymark" placeholder="Physics">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" name="" class="form-control" id="chemark" placeholder="Chemistry">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" name="" class="form-control" id="hismark" placeholder="History">
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-4 mt-3">
+                        <button id="clear" class="btn btn-info" onclick="clearbutton()">Clear</button>
+                    </div>
+                    <div class="col-4 mt-3">
+                        <button id="clear" class="btn btn-success" onclick="resultcal()">calculate Result</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                      <center>  <strong><p style="color: crimson;" id="marktextp"></p></strong></center>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
+        function resultcal(){
+            var stdnameis=document.getElementById('stdnameEnter').value;
+            var marh1=parseInt(document.getElementById('mathmark').value);
+            var eng1=parseInt(document.getElementById('engmark').value);
+            var phy1=parseInt(document.getElementById('phymark').value);
+            var chek1=parseInt(document.getElementById('chemark').value);
+            var his1=parseInt(document.getElementById('hismark').value);
+            var addis=marh1+eng1+phy1+chek1+his1;
+            if(addis>=400){
+                document.getElementById('marktextp').innerHTML="Congratulation  "+stdnameis+" Your total mark is = "+addis+" You are Passs ...🎈";
+            }
+           else{
+            document.getElementById('marktextp').innerText=stdnameis+" 😢opps ...!You are fail";
+           }
+
+        }
+
+
+
+
         var studentname=[];
 
         function addname(){
@@ -149,8 +210,7 @@
         }
         function selectcity(){
              var cityis=document.getElementById('cityname').value;
-              output=cityis.value
-            document.getElementById('cityselected').innerHTML=output;
+            document.getElementById('cityselected').innerHTML=cityis;
         }
     </script>
 </body>
