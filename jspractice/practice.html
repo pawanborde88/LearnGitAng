@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="bg-info-subtle">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 border border-primary rounded-4 mt-5">
+               <div class="mt-3 text-center">
+                <h4>Task 5</h4>
+               </div><hr>
+               <ol>
+                <li>
+                    Create employee Object with fields name, contactNo, deptName, teamLeadName,technology
+                </li>
+                <li>Create a form for above fileds like below</li>
+                <li>on Save Button - add values to perticular field from textbox</li>
+                <li>on Print button - print whole object into p tag</li>
+                <li>on clear button - empty value of all fields from object and print updated Object again</li>
+              </ol><hr>
+              <div class="row">
+                <div class="col-4   p-3">
+                    <input placeholder="Enter Name" class="form-control" type="text" name="" id="entername">
+                </div>
+                <div class="col-4   p-3">
+                    <input placeholder="Contact No" class="form-control" type="text" name="" id="contactno">
+                </div>
+                <div class="col-4   p-3">
+                    <input placeholder="Team Lead Name" class="form-control" type="text" name="" id="temlname">
+                </div>
+                <div class="col-4  p-3">
+                    <select class="form-control form-select" name="" id="selectdept" onchange="selecttdept()">
+                        <option value="">Select Department</option>
+                        <option value="Sales">Sales</option>
+                        <option value="IT">IT</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Testing">Testing</option>
+                        <option value="Development">Development</option>
+                        
+                    </select>
+                </div><div class="col-4  p-3">
+                    <select class="form-control form-select" name="" id="selecttech" onchange="selecttech()">
+                        <option value="" style="background-color: rgb(230, 11, 113);">Select Technology</option>
+                        <option value=".Net">.Net</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Angular">Angular</option>
+                        <option value="React">React</option> 
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-3">
+                        <button class="btn btn-success" onclick="printobj()">Print object</button>
+                    </div>
+                    <div class="col-4 p-3">
+                        <button class="btn btn-info" onclick="saveobj()">Save object</button>
+                    </div>
+                    <div class="col-4 p-3">
+                        <button class="btn btn-danger" onclick="clearobj()">Clear</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <strong><p style="color: crimson;" id="objtextarea"></p></strong>
+                    </div>
+                </div>
+            </div>
+            </div>
+           
+        </div>
+    </div>
+    <script>
+       function printobj(){
+        var empname=document.getElementById('entername').value;
+        var contactno=document.getElementById('contactno').value;
+        var team_lead=document.getElementById('temlname').value;
+        var deptselect=document.getElementById('selectdept').value;
+        var techselect=document.getElementById('selecttech').value;
+   
+        document.getElementById('objtextarea').innerHTML="Name : :"+empname+"  Contact no: "+contactno+" Team Lead Name:  "+team_lead+"  Departmant is  "+deptselect+"  Technology  is  "+techselect
+       
+       }
+       function clearobj(){
+        var empname=document.getElementById('entername').value;
+        var contactno=document.getElementById('contactno').value;
+        var team_lead=document.getElementById('temlname').value;
+        var deptselect=document.getElementById('selectdept').value;
+        var techselect=document.getElementById('selecttech').value;
+        document.getElementById('objtextarea').innerHTML=empname+"  "
+
+       }
+    </script>
+</body>
+</html>

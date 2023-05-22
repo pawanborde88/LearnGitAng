@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var studentlist=[
+{
+    name:'pawan borde',
+    city:'pune',
+    contactno:'888852657',
+},
+{
+    name:'Rushi ',
+    city:'Pune',
+    Contactno:'987857163259',
+},
+{
+    name:'Rahul',
+    city:'Mumbai',
+    contactno:'7857163258',
+}
+]
+console.log(studentlist[1]);
+console.log(studentlist[0]);
+
+    var employeeobj={
+
+        name:'chetan jogi',
+        empid:485,
+        isactice:false,
+        dob:'30-2-1999',
+        contactList:[
+            "7895876254",
+            "8788949390",
+            "7859492545",
+            "6589745125"
+        ],
+        Familydetails:{
+            mothername:'Rekha',
+            Fathername:'Sakharam',
+            contactno:'365785458521',
+            address:{
+                plotno:202,
+                area:"swarajya nagar",
+                city:'Kaij - beed'
+            }
+        }
+    }
+    employeeobj.Familydetails.address.state="Maharashtra";
+    console.log(employeeobj.Familydetails.address.plotno);
+    console.log(employeeobj.contactList[1]);
+    </script>
+</body>
+</html>
