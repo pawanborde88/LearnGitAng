@@ -78,7 +78,7 @@
                     <h5 >Select City</h5>
                 </div><hr>
                 <div class="col-6">
-                    <select name="" aria-label="size 3 select example" id="cityname" class="form-control form-select " onselect="selectcity()">
+                    <select name="" aria-label="size 3 select example" id="cityname" class="form-control form-select " onchange="selectcity()">
                         <option selected>Select City</option>
                         <option value="Latur" >Latur</option>
                         <option value="Beed">Beed</option>
@@ -90,7 +90,7 @@
                         <option value="Nashik">Nashik</option>
                     </select>                
                 </div>
-                  <p id="cityselected"></p>   
+               <center><strong >   <p class="mt-3" id="cityselected"></p>   </strong></center>
             </div>
         </div>
         <div class="row">
@@ -211,7 +211,7 @@
         }
         function selectcity(){
              var cityis=document.getElementById('cityname').value;
-            document.getElementById('cityselected').innerHTML=cityis;
+            document.getElementById('cityselected').innerHTML="Your city is =  "+cityis;
         }
     </script>
 </body>
