@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="bg-light">
+   <div class="container pt-2">
+    <div class="row column-gap-5">
+        <div class="col-5 bg-secondary-subtle mt-5 p-3 rounded-4 border border-primary">
+            <div class="text-center">
+                <h4>Task 1</h4>
+            </div>
+            <ol>
+                <li>Write a logic to get Sum Of 10 numbers from 1-10</li>
+                <li>Print SUM in strong tag</li>
+                <li>(use for loop to complete this task)</li>
+            </ol>
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-danger" onclick="sumnumbers()">Print Sum Numbers</button>
+                </div>
+                <div class="col-6 "> 
+                    <strong><p style="color: rgb(8, 3, 17);" id="sumparatext"></p></strong>
+                </div>
+        </div>  
+    </div>
+
+    <div class="col-5 bg-secondary-subtle mt-5 p-3 rounded-4 border border-primary">
+        <div class="text-center">
+            <h4>Task 2</h4>  
+        </div>
+        <ul>
+            <li>Create an Array of some numbers</li>
+            <li>using for loop print even no only in console from array</li>
+        </ul>
+      
+    </div>
+    
+   </div>
+<div class="row">
+    <div class="col-6 bg-secondary-subtle border border-primary mt-2 p-3 rounded-4 border border-primary">
+        <div class="text-center">
+            <h4>Task 3</h4>
+        </div>
+        <div class="col-12">
+            <strong><p id="array1"></p></strong>
+            <strong><p id="array2"></p></strong>
+            <center><strong><p style="color: rgb(248, 12, 4); " id="array3"></p></strong> 
+            </center>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        // // Task--1
+        // function sumnumbers(){
+        // var add=0;
+        // for (let index = 1; index < 10+1; index++) {
+        //     add=add+index;
+        //     console.log(add);  
+        // }
+        // document.getElementById('sumparatext').innerText="Sum of 1-10 is  ="+add;
+        // }
+
+        // // Task--2
+        // var num1=[20,50,30,45,75,40,55];
+        // for( var i=0;i<num1.length;i++){
+        //     var num=num1[i];
+        //     if(num%2==0){
+        //         console.log(num);      
+        //     }
+        // }
+        //  // Task--3
+         var arr1=[20,45,63,87,90,45,12];
+         var arr2=[45,78,96,12,45,63,78,85,65];
+         var sum=0;
+         var sum1=0;
+         for (let i = 0; i<arr1.length; i++) {
+         sum=sum+arr1[i]  
+         }   
+         for (let i = 0; i<arr2.length; i++) {
+            sum1=sum1+arr2[i]  
+         } 
+         document.getElementById('array1').innerHTML="Array 1 ="+arr1+"=== "+sum
+         document.getElementById('array2').innerHTML="Array 2 ="+arr2+"==== "+sum1
+         result=sum+sum1
+         document.getElementById('array3').innerHTML="Additon is=="+result;
+    </script>
+</body>
+</html>
